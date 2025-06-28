@@ -1,57 +1,3 @@
-// import { Link } from "react-router-dom";
-// import SlideTabs from "./SlideTabs";
-// import { useEffect, useState } from "react";
-
-// export const Header = () => {
-//   const [scrolled, setScrolled] = useState(false);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       if (window.scrollY > 10) {
-//         setScrolled(true);
-//       } else {
-//         setScrolled(false);
-//       }
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
-
-//   return (
-//     <header
-// className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-//   scrolled
-//     ? "bg-gray-900/90 backdrop-blur-md py-2 shadow-lg"
-//     : "bg-transparent py-4"
-// }`}
-//     >
-//       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-//         <Link to="/" className="flex items-center gap-2 group">
-//           <h2 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:to-blue-400 transition-all duration-300">
-//             Sushant Jha
-//           </h2>
-//         </Link>
-
-//         <div className="hidden md:flex items-center gap-1">
-//           <SlideTabs />
-//         </div>
-
-//         {/* Mobile menu button would go here */}
-
-//         <div className="flex items-center gap-4">
-//           <a
-//             href="/contact"
-//             className="hidden sm:flex items-center gap-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors duration-300 text-sm"
-//           >
-//             Contact Me
-//           </a>
-//         </div>
-//       </nav>
-//     </header>
-//   );
-// };
-
 import { Link } from "react-router-dom";
 import SlideTabs from "./SlideTabs";
 import { useEffect, useState } from "react";
@@ -85,7 +31,7 @@ export const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        className={`fixed top-0 w-full z-50 transition-all duration-300  ${
           scrolled
             ? "bg-gray-900/90 backdrop-blur-md py-2 shadow-lg"
             : "bg-transparent py-4"
@@ -121,10 +67,10 @@ export const Header = () => {
           </button>
 
           {/* Desktop Contact Button */}
-          <div className="flex items-center gap-4">
+          <div className="hidden sm:flex items-center gap-4">
             <a
               href="/contact"
-              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors duration-300 text-sm"
+              className=" items-center gap-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors duration-300 text-sm"
             >
               Contact Me
             </a>
@@ -175,15 +121,6 @@ export const Header = () => {
           >
             Contact
           </Link>
-
-          {/* Mobile Contact Button */}
-          <a
-            href="/contact"
-            className="mt-8 px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-lg"
-            onClick={closeMobileMenu}
-          >
-            Contact Me
-          </a>
         </div>
       </div>
     </>
