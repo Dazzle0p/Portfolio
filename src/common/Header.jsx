@@ -83,7 +83,7 @@ export const Header = () => {
         className={`fixed top-0 left-0 w-full h-screen bg-gray-900/9 backdrop-blur-lg z-40 transition-all duration-300 ease-in-out transform ${
           mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
-        style={{ marginTop: scrolled ? "60px" : "80px" }}
+        style={{ marginTop: scrolled ? "40px" : "70px" }}
       >
         <div className="flex flex-col items-center justify-center h-full space-y-8">
           <Link

@@ -1,5 +1,10 @@
 import portfolio from "../assets/portfolio.png";
 import fruitweb from "../assets/fruitweb.png";
+import eComFasion from "../assets/eComFasion.png";
+import geminiClone from "../assets/geminiClone.png";
+import bankManagement from "../assets/bankManagement.jpg";
+import solarSystem from "../assets/solarSystem.jpg";
+import gamingWeb from "../assets/gamingWeb.png";
 import { FaArrowRightToBracket, FaGithub } from "react-icons/fa6";
 import { SlArrowRightCircle } from "react-icons/sl";
 import AOS from "aos";
@@ -9,52 +14,72 @@ AOS.init();
 const Projects = () => {
   const projects = [
     {
-      name: "Portfolio Website",
-      desc: "A responsive portfolio showcasing my skills and experience with modern design",
-      img: portfolio,
-      tags: ["React", "Tailwind CSS", "AOS"],
-      liveLink: "#",
-      codeLink: "#",
+      name: "Ecommerce Website",
+      desc: "Built a responsive e-commerce platform supporting over 20+ dynamic components with role-based access for users and admins.",
+      img: eComFasion,
+      tags: [
+        "MERN",
+        "JavaScript",
+        "Redux Toolkit",
+        "JWT",
+        "PayPal API",
+        "Cloudinary",
+        "Tailwind CSS",
+      ],
+      liveLink: "https://e-commerce-website-eight-flame.vercel.app/",
+      codeLink: "https://github.com/Dazzle0p/E-Commerce-Website",
     },
     {
-      name: "Fruit E-commerce",
-      desc: "An online store for fresh fruits with cart functionality",
+      name: "Gemini Clone",
+      desc: "A fully functional AI chatbot interface inspired by Google’s Gemini using React and Gemini API, enabling users to interact with a conversational AI assistant.",
+      img: geminiClone,
+      tags: ["React", "Gemini API", "JavaScript", "CSS"],
+      liveLink: "https://gemini-clone-six-jet.vercel.app/",
+      codeLink: "https://github.com/Dazzle0p/Gemini-Clone",
+    },
+    {
+      name: "Bank Management System ",
+      desc: "Key features include user authentication, account management, transaction processing, and a user-friendly interface, enhancing convenience and security.",
+      img: bankManagement,
+      tags: ["JAVA", "Swing", "AWT", "MySql", "JDBC"],
+      liveLink: "https://github.com/Dazzle0p/BankManagementSystem",
+      codeLink: "https://github.com/Dazzle0p/BankManagementSystem",
+    },
+    {
+      name: "Responsive Fruit Website",
+      desc: "Responsive Fruit Website Design Using HTML CSS & JavaScript - Contains animations when scrolling.",
       img: fruitweb,
-      tags: ["React", "Node.js", "MongoDB"],
-      liveLink: "#",
-      codeLink: "#",
+      tags: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Dark/Light Theme",
+        "Smooth-Scrolling",
+      ],
+      liveLink: "https://fruit-website-ecru.vercel.app/",
+      codeLink: "https://github.com/Dazzle0p/Fruit-Website",
     },
     {
-      name: "Task Manager",
-      desc: "Productivity app to organize and track daily tasks",
-      img: portfolio,
-      tags: ["React", "Firebase", "Redux"],
-      liveLink: "#",
-      codeLink: "#",
+      name: "Solar-System-Three-JS",
+      desc: "This Solar System 3D visualization is an interactive web-based application built with Three.js.",
+      img: solarSystem,
+      tags: [
+        "Three.js",
+        "🌀 Speed Control",
+        "♻ Reset, Save & Load",
+        "🌠 Toggle Planet Paths",
+        "🌗 Realistic Lighting",
+      ],
+      liveLink: "https://solar-system-three-js-tau.vercel.app/",
+      codeLink: "https://github.com/Dazzle0p/Solar-System-Three-JS",
     },
     {
-      name: "Weather App",
-      desc: "Real-time weather forecasting application",
-      img: fruitweb,
-      tags: ["API Integration", "JavaScript", "CSS3"],
-      liveLink: "#",
-      codeLink: "#",
-    },
-    {
-      name: "Recipe Finder",
-      desc: "Discover recipes based on ingredients you have",
-      img: portfolio,
-      tags: ["React", "Edamam API", "Material UI"],
-      liveLink: "#",
-      codeLink: "#",
-    },
-    {
-      name: "Fitness Tracker",
-      desc: "Track workouts and monitor fitness progress",
-      img: fruitweb,
-      tags: ["React Native", "Firebase", "Chart.js"],
-      liveLink: "#",
-      codeLink: "#",
+      name: "Gaming Web",
+      desc: "Developed a gaming web application for gamer's to purchase their favorite game and play",
+      img: gamingWeb,
+      tags: ["React", "CSS", "chatling.ai"],
+      liveLink: "https://gaming-web-umber.vercel.app/",
+      codeLink: "https://github.com/Dazzle0p/Gaming-Web",
     },
   ];
 
