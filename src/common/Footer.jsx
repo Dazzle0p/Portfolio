@@ -8,23 +8,23 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: <FaGithub />,
-      url: "https://github.com/yourusername",
+      url: "https://github.com/Dazzle0p",
       name: "GitHub",
     },
     {
       icon: <FaLinkedin />,
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://www.linkedin.com/in/sushantjha1205/",
       name: "LinkedIn",
     },
     {
       icon: <FaTwitter />,
-      url: "https://twitter.com/yourusername",
+      url: "https://x.com/imSushant02",
       name: "Twitter",
     },
     {
       icon: <FaEnvelope />,
-      url: "mailto:your.email@example.com",
-      name: "Email",
+      url: "mailto:dazushant@gmail.com",
+      name: "Gmail",
     },
   ];
 

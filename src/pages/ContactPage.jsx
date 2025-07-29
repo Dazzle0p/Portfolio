@@ -50,7 +50,7 @@ const ContactPage = () => {
                       Email
                     </h4>
                     <a
-                      href="mailto:contact@example.com"
+                      href="mailto:dazushant@gmail.com"
                       className="text-gray-300 hover:text-cyan-400 transition-colors"
                     >
                       dazushant@gmail.com
@@ -95,9 +95,21 @@ const ContactPage = () => {
                 </h4>
                 <div className="flex gap-4">
                   {[
-                    { icon: <FaLinkedin />, url: "#", name: "LinkedIn" },
-                    { icon: <FaGithub />, url: "#", name: "GitHub" },
-                    { icon: <FaTwitter />, url: "#", name: "Twitter" },
+                    {
+                      icon: <FaLinkedin />,
+                      url: "https://www.linkedin.com/in/sushantjha1205/",
+                      name: "LinkedIn",
+                    },
+                    {
+                      icon: <FaGithub />,
+                      url: "https://github.com/Dazzle0p",
+                      name: "GitHub",
+                    },
+                    {
+                      icon: <FaTwitter />,
+                      url: "https://x.com/imSushant02",
+                      name: "Twitter",
+                    },
                   ].map((social, index) => (
                     <a
                       key={index}
