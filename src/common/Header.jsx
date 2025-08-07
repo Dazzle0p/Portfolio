@@ -69,9 +69,9 @@ export const Header = () => {
           {/* Desktop Contact Button */}
           <div className="hidden sm:flex items-center gap-4">
             <Link to="/contact">
-              <a className=" items-center gap-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors duration-300 text-sm">
+              <button className=" items-center gap-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors duration-300 text-sm">
                 Contact Me
-              </a>
+              </button>
             </Link>
           </div>
         </nav>
