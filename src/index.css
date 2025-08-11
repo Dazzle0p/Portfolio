@@ -14,3 +14,62 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.glass-panel {
+  background: rgba(23, 25, 48, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.glass-frame {
+  background: rgba(20, 22, 42, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(125, 211, 252, 0.15);
+}
+
+.glass-button-primary {
+  background: rgba(6, 148, 178, 0.25);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(103, 232, 249, 0.3);
+  color: #e0f2fe;
+  font-weight: 500;
+}
+
+.glass-button-secondary {
+  background: rgba(30, 33, 58, 0.4);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  color: #bae6fd;
+  font-weight: 500;
+}
+
+.glass-icon {
+  background: rgba(8, 47, 73, 0.4);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.social-icon {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+}
+
+.glass-button-primary:hover,
+.glass-button-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
+}

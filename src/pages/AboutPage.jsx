@@ -9,34 +9,35 @@ const AboutPage = () => {
   return (
     <section
       id="about"
-      className="w-full py-16 md:py-20"
+      className="w-full py-16 md:py-20 relative overflow-hidden"
       style={{
-        background:
-          "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
+        background: "radial-gradient(circle at top right, #0f172a, #0d1326)",
       }}
     >
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="flex justify-center text-white text-4xl font-bold pb-12">
-          About Me
+      {/* Glassmorphism background elements bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900*/}
+      <div className="absolute -top-1/3 -right-1/4 w-full h-[800px] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 rounded-full blur-[100px]"></div>
+      <div className="absolute -bottom-1/4 -left-1/4 w-3/4 h-[600px]  from-gray-900 via-blue-900 to-gray-900  rounded-full blur-[100px]"></div>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h1 className="flex justify-center text-cyan-300 text-4xl font-bold pb-16 tracking-wider">
+          ABOUT ME
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-          <div className="lg:col-span-2 order-2 lg:order-1">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+          {/* Text Content - Glass Panel */}
+          <div className="lg:col-span-2 order-2 lg:order-1 glass-panel p-8 rounded-2xl">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
               Hi, I'm
             </h1>
-            <h1 className="text-4xl md:text-5xl font-bold text-cyan-400 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-cyan-300 mb-6 tracking-wide">
               Sushant Kumar Jha
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6">
               Creative and detail-oriented Web Developer with 1+ year of
               experience building responsive, scalable, and user-focused web
               applications. Proficient in the MERN stack, with a strong focus on
               translating UI/UX designs into clean, maintainable code and
               optimizing performance.
-              <br />
-              <br />
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8">
@@ -45,73 +46,94 @@ const AboutPage = () => {
                 download="Sushant_FullStack_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-all duration-300"
+                className="glass-button-primary flex items-center gap-2 px-6 py-3 rounded-lg transition-all duration-300 hover:gap-3"
               >
                 <FaRegFilePdf className="text-lg" /> Download CV
               </a>
               <Link
                 to="/projects"
-                className="flex items-center gap-2 px-6 py-3 border border-cyan-400 hover:bg-cyan-900/30 text-cyan-400 rounded-lg transition-all duration-300"
+                className="glass-button-secondary flex items-center gap-2 px-6 py-3 rounded-lg transition-all duration-300 hover:gap-3"
               >
                 <FaCode /> View Projects
               </Link>
             </div>
 
-            <div className="flex gap-4 mt-8">
+            <div className="flex gap-5 mt-8">
               <a
                 href="https://github.com/Dazzle0p"
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                className="social-icon text-gray-300 hover:text-cyan-300 transition-all duration-300"
               >
                 <FaGithub className="text-2xl" />
               </a>
               <a
                 href="https://www.linkedin.com/in/sushantjha1205/"
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                className="social-icon text-gray-300 hover:text-cyan-300 transition-all duration-300"
               >
                 <FaLinkedin className="text-2xl" />
               </a>
             </div>
           </div>
 
+          {/* Profile Image - Glass Frame */}
           <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-            <div className="relative">
-              <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 opacity-75 blur-md"></div>
-              <img
-                className="relative object-cover rounded-full h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 border-4 border-gray-800 z-10"
-                src={myImage}
-                alt="Profile"
-              />
+            <div className="relative group">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400/30 to-blue-500/30 blur-lg group-hover:blur-xl transition-all duration-500"></div>
+              <div className="relative glass-frame rounded-full p-1.5">
+                <img
+                  className="object-cover rounded-full h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96"
+                  src={myImage}
+                  alt="Profile"
+                />
+              </div>
+              <div className="absolute bottom-4 right-4 bg-cyan-500/80 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full">
+                MERN Developer
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-16">
+        <div className="mt-20">
           <Marque />
         </div>
 
-        {/* Stats Section - Uncomment if needed */}
-
+        {/* Stats Section */}
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6">
-          {[1, 2, 3].map((item) => (
+          {[
+            {
+              icon: <FaCode className="text-xl" />,
+              title: "Projects",
+              value: "12+",
+              desc: "Completed projects",
+            },
+            {
+              icon: <CiLocationArrow1 className="text-xl rotate-45" />,
+              title: "Experience",
+              value: "1+ Year",
+              desc: "Web development",
+            },
+            {
+              icon: <FaGithub className="text-xl" />,
+              title: "Contributions",
+              value: "50+",
+              desc: "Code commits",
+            },
+          ].map((item, index) => (
             <div
-              key={item}
-              className="p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300"
+              key={index}
+              className="glass-panel p-6 rounded-xl border border-white/5 hover:border-cyan-400/30 transition-all duration-500 group"
             >
-              <div className="flex justify-between">
-                <div>
-                  <FaCode className="text-2xl text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white">
-                    Total Projects
-                  </h3>
-                  <p className="text-gray-400">
-                    Innovative web solutions crafted
-                  </p>
-                </div>
+              <div className="flex justify-between items-start">
+                <div className="glass-icon">{item.icon}</div>
                 <div className="text-right">
-                  <h3 className="text-2xl font-bold text-cyan-400">12+</h3>
-                  <CiLocationArrow1 className="text-xl text-cyan-400 ml-auto mt-2 rotate-45" />
+                  <h3 className="text-3xl font-bold text-cyan-300 group-hover:text-white transition-colors">
+                    {item.value}
+                  </h3>
                 </div>
               </div>
+              <h3 className="text-xl font-semibold text-white mt-4">
+                {item.title}
+              </h3>
+              <p className="text-gray-400 mt-2">{item.desc}</p>
             </div>
           ))}
         </div> */}
